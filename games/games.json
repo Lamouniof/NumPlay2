@@ -342,5 +342,21 @@
     ],
     "colors": 48,
     "repo": "https://github.com/Mason363/NumPlay/tree/main/games/numvisuals"
+  },
+  {
+    "id": "novatycoon",
+    "title": "Nova Tycoon",
+    "tagline": "Build your empire",
+    "credit": null,
+    "top": "0x3D6BFF",
+    "bottom": "0x14124F",
+    "accent": "0x35C759",
+    "records": [
+      "novatycoon.sav"
+    ],
+    "shots": [
+      "docs/shot.png"
+    ],
+    "repo": "https://github.com/Mason363/NumPlay/tree/main/games/novatycoon"
   }
 ]

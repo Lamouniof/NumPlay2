@@ -1,4 +1,4 @@
-# NumPlay: one launcher app with every game, plus each game on its own.
+﻿# NumPlay: one launcher app with every game, plus each game on its own.
 #
 #   make            build/NumPlay*.nwa and build/apps/*.nwa (the release files)
 #   make check      link the NumPlay apps like the calculator does, print sizes, check RAM
@@ -8,6 +8,7 @@
 #
 # Needs arm-none-eabi-gcc (with newlib), Node.js for nwlink, Python 3 with
 # Pillow, and Rust with the thumbv7em-none-eabihf target for Tetris.
+
 
 NWLINK ?= npx --yes -- nwlink@1.0.0
 ARM_CC = arm-none-eabi-gcc
@@ -74,6 +75,7 @@ MOD_buckshot = games/buckshot/output/module.o
 MOD_portal = games/portal/output/module.o
 MOD_chess = games/chess/output/module.o
 MOD_numvisuals = games/numvisuals/output/module.o
+MOD_novatycoon = games/novatycoon/output/module.o
 MOD_tetris = $(B)/tetris/raw.o
 ENTRY = main
 ENTRY_tetris = np_tetris_main
@@ -232,6 +234,7 @@ SIM_buckshot = games/buckshot/output/sim-module.o
 SIM_portal = games/portal/output/sim-module.o
 SIM_chess = games/chess/output/sim-module.o
 SIM_numvisuals = games/numvisuals/output/sim-module.o
+SIM_novatycoon = games/novatycoon/output/sim-module.o
 SIM_tetris = $(B)/sim/tetris.o
 SIM_CFLAGS = -std=gnu11 -O2 -fPIC -DNP_SIMULATOR=1 -DNP_VERSION='"$(VERSION)"' $(EADK_SIM_CFLAGS) -Ilauncher/src -Wall -Wno-unused-parameter
 
@@ -271,3 +274,4 @@ clean:
 	-$(MAKE) -C games/hollowknight clean
 	-cd games/tetris/tetris && $(CARGO) clean
 	-$(foreach g,$(STD_GAMES),$(MAKE) -C games/$(g) clean;)
+
