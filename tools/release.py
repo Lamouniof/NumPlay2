@@ -25,8 +25,6 @@ EXTRAS = {"numvisuals"}
 ALONE = {
     "celeste": ("Celeste", "the whole climb up Celeste Mountain. Too big to share the calculator with NumPlay: install it "
                 "on its own"),
-    "tycoon": ("NumTycoon", "build a business empire, from a lemonade stand to a space port. NumPlay's share of the "
-               "calculator's app space is full: install it on its own"),
     "hollowknight": ("Hollow Knight", "from King's Pass to Hornet in Greenpath. Too big to share the calculator with "
                      "NumPlay: install it on its own"),
     "championisland": ("Champion Island", "the Doodle Champion Island Games. Too big to share the calculator with "

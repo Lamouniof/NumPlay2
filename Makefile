@@ -18,8 +18,8 @@ CARGO ?= cargo
 B = build
 # the RAM the oldest calculator software that runs apps gives them (23.2: 148928 bytes; 25.2 gives 153676)
 RAM_LIMIT = 148928
-# the calculator's space for installed apps (0x90200000 to 0x903F0000 in its flash)
-APP_SPACE = 2031616
+# the space for installed apps: 6 MB with the memory-extension system (stock calculator: 2031616)
+APP_SPACE = 6291456
 # Upsilon, the N0110 and N0115's custom software, gives .nwa apps less RAM: NumPlay-Upsilon.nwa has
 # the games that fit it (NumPlay draws their text there: see launcher/src/compat.c)
 UPSILON_RAM = 107674
